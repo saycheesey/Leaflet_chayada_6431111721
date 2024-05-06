@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating Maps with Leaflet</title>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css 
+integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js 
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+</head>
+<body>
+<div id="map" style="height: 600px"></div>></div>
+<script>
+var map = L.map('map').setView([13.7563, 100.5018], 10);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var greenIcon = L.icon({
+iconUrl: 'PINicon1.png',
+iconSize:     [30, 30], 
+iconAnchor:   [45, 45], 
+popupAnchor:  [0, -39] 		
+});
+L.marker([13.75018, 100.49188],{icon:greenIcon}).addTo(map).bindPopup("<b>The Grand Palace</b><br>Pranakorn district, Bangkok<br>");
+L.marker([13.68896, 100.50537],{icon:greenIcon}).addTo(map).bindPopup("<b>Terminal 21 Rama 3</b><br>Bang kho laem district, Bangkok<br>");
+L.marker([13.69953, 100.52560],{icon:greenIcon}).addTo(map).bindPopup("<b>Vasudevi school</b><br>Bang kho laem district, Bangkok<br>");
+L.marker([13.73678, 100.53303],{icon:greenIcon}).addTo(map).bindPopup("<b>Chula Engineering building</b><br>Pathumwan district, Bangkok<br>");
+L.marker([13.74305, 100.54301],{icon:greenIcon}).addTo(map).bindPopup("<b>Mater dei school</b><br>Pathumwan district, Bangkok<br>");
+L.marker([13.75765, 100.49055],{icon:greenIcon}).addTo(map).bindPopup("<b>Thammasat University-Tha Phra Chan campus</b><br>Pranakorn district, Bangkok<br>");
+L.marker([13.76260, 100.51800],{icon:greenIcon}).addTo(map).bindPopup("<b>King Rama 9 Memorial Park</b><br>Dusit district, Bangkok<br>");
+L.marker([13.75850, 100.56613],{icon:greenIcon}).addTo(map).bindPopup("<b>Central Rama 9</b><br>Din Daeng district, Bangkok<br>");
+L.marker([13.72420, 100.55908],{icon:greenIcon}).addTo(map).bindPopup("<b>Queen Sirikit National Convention Centre</b><br>Khlong Toei district, Bangkok<br>");
+L.marker([13.73160, 100.52949],{icon:greenIcon}).addTo(map).bindPopup("<b>Wat Hua Lamphong</b><br>Bang Rak district, Bangkok<br>");
+</script> 
+
+</body>
+</html>
